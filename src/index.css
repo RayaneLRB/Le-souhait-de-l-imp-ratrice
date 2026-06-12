@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-noir: #0a0a0a;
+  --color-noir-light: #1a1a1a;
+  --color-noir-medium: #2a2a2a;
+  --color-ivoire: #f5f0e8;
+  --color-ivoire-dark: #e8e0d0;
+  --color-or: #c9a96e;
+  --color-or-light: #d4b87a;
+  --color-or-dark: #b8944f;
+  --color-anthracite: #3d3d3d;
+  --color-anthracite-light: #555555;
+  --color-gris: #8a8a8a;
+
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+  --font-cormorant: "Cormorant Garamond", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: #0a0a0a;
+  color: #f5f0e8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(201, 169, 110, 0.3);
+  color: #f5f0e8;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a96e;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4b87a;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #c9a96e, #d4b87a, #b8944f, #c9a96e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-glass {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(201, 169, 110, 0.1);
+}
+
+.bg-glass-light {
+  background: rgba(245, 240, 232, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 240, 232, 0.08);
+}
+
+.line-gold {
+  background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+  height: 1px;
+}
+
+.line-gold-vertical {
+  background: linear-gradient(180deg, transparent, #c9a96e, transparent);
+  width: 1px;
+}
